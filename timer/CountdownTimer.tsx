@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
     flex: .50,
     justifyContent: 'center',
     alignItems: 'center',
-    // paddingTop: Constants.statusBarHeight,
     padding: 20,
   },
   remainingTime: {

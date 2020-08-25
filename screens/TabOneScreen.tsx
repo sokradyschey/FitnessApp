@@ -10,6 +10,7 @@ import {
 import Timer from '../timer/CountdownTimer';
 
 const App = () => {
+  // Modal should open for countdown timer
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <View style={styles.centeredView}>
