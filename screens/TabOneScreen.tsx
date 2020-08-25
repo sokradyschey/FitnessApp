@@ -1,18 +1,31 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Button } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
 export default function TabOneScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>2-Minute Warm Up</Text>
+      <Button onPress={() => {
+        alert('You tapped the button!');
+      }}
+        title="2-Minute Warm Up"
+      />
         <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <Text style={styles.title}>10-Minute Abs Workout</Text>
+        <Button onPress={() => {
+          alert('You tapped the button!');
+        }}
+          title="10-Minute Warm Up"
+        />
+        <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+        <Button onPress={() => {
+          alert('You tapped the button!');
+        }}
+          title="30-Minute Warm Up"
+        />
         <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
     </View>
-  );
+  );  
 }
 
 const styles = StyleSheet.create({
