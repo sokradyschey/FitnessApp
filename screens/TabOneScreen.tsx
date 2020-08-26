@@ -9,8 +9,9 @@ import {
 } from "react-native";
 import Timer from '../timer/CountdownTimer';
 
-const App = () => {
-  // Modal should open for countdown timer
+const SelectWorkout = () => {
+  // Modal should open for countdown timer.
+  // Create multiple buttons and have countdown set to specified exercise
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <View style={styles.centeredView}>
@@ -38,7 +39,6 @@ const App = () => {
           </View>
         </View>
       </Modal>
-
       <TouchableHighlight
         style={styles.openButton}
         onPress={() => {
@@ -88,4 +88,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default App;
+export default SelectWorkout;
