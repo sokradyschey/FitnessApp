@@ -47,6 +47,24 @@ const SelectWorkout = () => {
       >
         <Text style={styles.textStyle}>2-Minute Warmup</Text>
       </TouchableHighlight>
+      
+      <TouchableHighlight
+      style={styles.openButton}
+      onPress={() => {
+        setModalVisible(true);
+      }}
+    >
+      <Text style={styles.textStyle}>10-Minute Warmup</Text>
+    </TouchableHighlight>
+    <TouchableHighlight
+    style={styles.openButton}
+    onPress={() => {
+      setModalVisible(true);
+    }}
+  >
+    <Text style={styles.textStyle}>30-Minute Workout</Text>
+  </TouchableHighlight>
+    
     </View>
   );
 };
@@ -54,7 +72,7 @@ const SelectWorkout = () => {
 const styles = StyleSheet.create({
   centeredView: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: "space-evenly",
     alignItems: "center",
   },
   modalView: {
@@ -74,7 +92,7 @@ const styles = StyleSheet.create({
   openButton: {
     backgroundColor: "#F194FF",
     borderRadius: 20,
-    padding: 10,
+    padding:20,
     elevation: 2
   },
   textStyle: {
@@ -83,7 +101,6 @@ const styles = StyleSheet.create({
     textAlign: "center"
   },
   modalText: {
-    marginBottom: 15,
     textAlign: "center"
   }
 });
