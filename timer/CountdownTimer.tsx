@@ -1,14 +1,15 @@
-import * as React from 'react';
+import React, { useState } from "react";
 import { View, StyleSheet, Animated, Button } from 'react-native';
-import Constants from 'expo-constants';
 import { CountdownCircleTimer } from 'react-native-countdown-circle-timer';
 
 
 export default function Timer({ path }: { path: string }) {
+    const [key, setKey] = useState(0);
   return (
     //   Have countdown timer match the specified workout
     <View style={styles.container}>
       <CountdownCircleTimer
+        key={key}
         isPlaying
         duration={10}
         onComplete={() => {
@@ -27,6 +28,11 @@ export default function Timer({ path }: { path: string }) {
           </Animated.Text>
         )}
       </CountdownCircleTimer>
+      <Button 
+        onPress={() => setKey(prevKey => prevKey + 1)}
+        title="Reset Timer"
+        color="#841584"
+      />
     </View>
   );
 }
