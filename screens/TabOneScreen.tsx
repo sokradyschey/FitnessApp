@@ -8,8 +8,11 @@ import {
   View
 } from "react-native";
 import Timer from '../timer/CountdownTimer';
+import { useLinkProps } from "@react-navigation/native";
 
-const SelectWorkout = () => {
+const workoutTitle = `Start Workout`;
+
+const SelectWorkout = (props) => {
   // Modal should open for countdown timer.
   // Create multiple buttons and have countdown set to specified exercise
   const [modalVisible, setModalVisible] = useState(false);
@@ -25,7 +28,7 @@ const SelectWorkout = () => {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Start Warm Up!</Text>
+            <Text style={styles.modalText}>{workoutTitle}</Text>
             <Timer path="/screens/TabOneScreen.tsx" />
             <TouchableHighlight
               style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
@@ -45,29 +48,21 @@ const SelectWorkout = () => {
           setModalVisible(true);
         }}
       >
-        <Text style={styles.textStyle}>2-Minute Warmup</Text>
+        <Text style={styles.textStyle}>{props.time}-Minute Warmup</Text>
       </TouchableHighlight>
-      
-      <TouchableHighlight
-      style={styles.openButton}
-      onPress={() => {
-        setModalVisible(true);
-      }}
-    >
-      <Text style={styles.textStyle}>10-Minute Warmup</Text>
-    </TouchableHighlight>
-    <TouchableHighlight
-    style={styles.openButton}
-    onPress={() => {
-      setModalVisible(true);
-    }}
-  >
-    <Text style={styles.textStyle}>30-Minute Workout</Text>
-  </TouchableHighlight>
-    
     </View>
   );
 };
+
+const workoutOptions = () => {
+  return (
+    <View style={styles.centeredView}>
+      <SelectWorkout time="2" />
+      <SelectWorkout time="5" />
+      <SelectWorkout time="10" />
+    </View>
+  )
+}
 
 const styles = StyleSheet.create({
   centeredView: {
@@ -105,4 +100,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default SelectWorkout;
+export default workoutOptions;

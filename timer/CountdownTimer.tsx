@@ -4,22 +4,21 @@ import { CountdownCircleTimer } from 'react-native-countdown-circle-timer';
 
 
 export default function Timer({ path }: { path: string }) {
-    const [key, setKey] = useState(0);
+  const [key, setKey] = useState(0);
   return (
-    //   Have countdown timer match the specified workout
+    //   Have countdown to match the specified time
     <View style={styles.container}>
       <CountdownCircleTimer
         key={key}
         isPlaying
-        duration={10}
+        duration={90}
         onComplete={() => {
-            // do your stuff here
             return [true, 1500] // repeat animation in 1.5 seconds
           }}
         colors={[
             ['#004777', 0.33], 
             ['#F7B801', 0.33], 
-            ['#A30000']
+            ['#A30000', 0.33]
         ]}>
         {({ remainingTime, animatedColor }) => (
           <Animated.Text
