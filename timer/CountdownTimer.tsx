@@ -27,11 +27,6 @@ export default function Timer({ path }: { path: string }) {
           </Animated.Text>
         )}
       </CountdownCircleTimer>
-      <Button 
-        onPress={() => alert('Simple Button pressed')}
-        title="Reset Timer"
-        color="#841584"
-      />
     </View>
   );
 }
