@@ -1,6 +1,26 @@
 import React, { useState } from "react";
-import { View, StyleSheet, Animated, Button } from 'react-native';
+import { View, StyleSheet, Animated, Button, Text } from 'react-native';
 import { CountdownCircleTimer } from 'react-native-countdown-circle-timer';
+
+const renderTime = ({ remainingTime }) => {
+  if (remainingTime === 0) {
+    return (
+      <Text style={styles.timer}>Woo! Great Workout!</Text>
+    )
+  }
+  if (remainingTime === 10) {
+    return (
+      <Text style={styles.timer}>Almost There..!</Text>
+    )
+  }
+  return (
+    <View style={styles.timer}>
+      <Text style={styles.text}>Remaining</Text>
+      <Text style={styles.value}>{remainingTime}</Text>
+      <Text style={styles.text}>seconds</Text>
+    </View>
+  );
+};
 
 
 export default function Timer({ path }: { path: string }) {
@@ -10,8 +30,8 @@ export default function Timer({ path }: { path: string }) {
     <View style={styles.container}>
       <CountdownCircleTimer
         key={key}
+        duration={60}
         isPlaying
-        duration={90}
         onComplete={() => {
             return [true, 1500] // repeat animation in 1.5 seconds
           }}
@@ -20,12 +40,7 @@ export default function Timer({ path }: { path: string }) {
             ['#F7B801', 0.33], 
             ['#A30000', 0.33]
         ]}>
-        {({ remainingTime, animatedColor }) => (
-          <Animated.Text
-            style={{ ...styles.remainingTime, color: animatedColor }}>
-            {remainingTime}
-          </Animated.Text>
-        )}
+        {renderTime}
       </CountdownCircleTimer>
       <Button 
         onPress={() => setKey(prevKey => prevKey + 1)}
@@ -46,4 +61,15 @@ const styles = StyleSheet.create({
   remainingTime: {
     fontSize: 46,
   },
+  timer: {
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  text: {
+    color: '#aaa',
+  },
+  value: {
+    fontSize: 40,
+  }
+
 });

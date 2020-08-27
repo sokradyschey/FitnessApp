@@ -48,7 +48,7 @@ const SelectWorkout = (props) => {
           setModalVisible(true);
         }}
       >
-        <Text style={styles.textStyle}>{props.time}-Minute Warmup</Text>
+        <Text style={styles.textStyle}>{props.time}-Minute Exercise</Text>
       </TouchableHighlight>
     </View>
   );
@@ -57,9 +57,7 @@ const SelectWorkout = (props) => {
 const workoutOptions = () => {
   return (
     <View style={styles.centeredView}>
-      <SelectWorkout time="2" />
-      <SelectWorkout time="5" />
-      <SelectWorkout time="10" />
+      <SelectWorkout time="1" />
     </View>
   )
 }
@@ -71,6 +69,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   modalView: {
+    justifyContent: "space-around",
     backgroundColor: "white",
     borderRadius: 20,
     padding: 35,
