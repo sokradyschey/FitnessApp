@@ -17,7 +17,7 @@
     "@react-navigation/bottom-tabs": "^5.6.1",
     "@react-navigation/native": "^5.6.1",
     "@react-navigation/stack": "^5.6.2",
-    "expo": "~38.0.8",
+    "expo": "^38.0.9",
     "expo-asset": "~8.1.7",
     "expo-constants": "~9.1.1",
     "expo-font": "~8.2.1",
@@ -40,9 +40,9 @@
     "@types/react-native": "~0.62.13",
     "babel-preset-expo": "~8.1.0",
     "jest-expo": "~38.0.0",
-    "typescript": "~3.9.5",
+    "react-native-countdown-circle-timer": "2.1.1",
     "react-native-svg": "latest",
-    "react-native-countdown-circle-timer": "2.1.1"
+    "typescript": "~3.9.5"
   },
   "private": true
 }

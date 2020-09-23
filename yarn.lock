@@ -3302,7 +3302,7 @@ expo-web-browser@~8.3.1:
   dependencies:
     compare-urls "^2.0.0"
 
-expo@~38.0.8:
+expo@^38.0.9:
   version "38.0.9"
   resolved "https://registry.yarnpkg.com/expo/-/expo-38.0.9.tgz#dac9e4ccee0b86747b71c1b3a827d60fe340c81e"
   integrity sha512-xT9h62Vi5e7nqbX+zWCqVw09wCOvoLJTy4cAw3ZE41ENidqCjZAYXv1DXx2LvQcGjZdarHkT2TzJZfl6zHFxDw==
@@ -6205,6 +6205,11 @@ react-native-appearance@~0.3.3:
     fbemitter "^2.1.1"
     invariant "^2.2.4"
     use-subscription "^1.0.0"
+
+react-native-countdown-circle-timer@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-countdown-circle-timer/-/react-native-countdown-circle-timer-2.1.1.tgz#b079c50da68f96e6c14255d422a1c096a0745257"
+  integrity sha512-FBJcHPoVbm04dyPqIaalqFQdpGgSCGgSL643Cxa5qdYr4g1f76RKPqnrT1c++lJ5f2dMQZt6YtXtIVw68mk/2w==
 
 react-native-gesture-handler@~1.6.0:
   version "1.6.1"
